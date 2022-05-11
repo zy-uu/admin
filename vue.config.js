@@ -39,7 +39,8 @@ module.exports = {
     proxy: {
       '/dev-api': {
         target: 'http://39.98.123.211:8170',
-        pathRewrite: {'^/dev-api': ''}
+        pathRewrite: {'^/dev-api': '' },
+        secure: false,
       }
     }
  

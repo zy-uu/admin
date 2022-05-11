@@ -1,11 +1,15 @@
 <template>
-  <div>attr</div>
+  <categorySelect />
 </template>
 
 <script>
 export default {
-    name: 'attr'
-
+    name: 'attr',
+    data() {
+      return {}
+    },
+    mounted() {
+    } 
 }
 </script>
 

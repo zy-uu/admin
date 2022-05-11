@@ -7,10 +7,12 @@ import 'element-ui/lib/theme-chalk/index.css'
 import locale from 'element-ui/lib/locale/lang/en' // lang i18n
 
 import '@/styles/index.scss' // global css
+import api from "@/api"  //global API
 
 import App from './App'
 import store from './store'
 import router from './router'
+import categorySelect from "@/components/CategorySelect"
 
 import '@/icons' // icon
 import '@/permission' // permission control
@@ -33,7 +35,11 @@ Vue.use(ElementUI, { locale })
 // 如果想要中文版 element-ui，按如下方式声明
 // Vue.use(ElementUI)
 
+//global components
+Vue.component("categorySelect",categorySelect)
+
 Vue.config.productionTip = false
+Vue.prototype.$API = api;
 
 new Vue({
   el: '#app',
